@@ -1,0 +1,286 @@
+html, body, #map {
+	height: 100%;
+	width: 100%;
+}
+
+	body {
+	font-family: sans-serif;
+	background-color: #D4EDF7;
+	margin: 0;
+	padding: 0;
+	}
+
+ #bar {
+	 width: 250px;
+	 float: left;
+	 background-color: #347B98;
+	 border-radius: 15px;
+	 text-align: center;
+	 margin-top: 15px;
+	 margin-left: 15px;
+	 height: 420px;
+	 z-index: 10;
+	 position: absolute;
+ }
+
+ #infoBar {
+	width: 250px;
+	float: left;
+	background-color: #347B98;
+	border-radius: 15px;
+	text-align: center;
+	margin-top: 450px;
+	margin-left: 15px;
+	height: 20px;
+	padding-top: 8px;
+	padding-bottom: 5px;
+	color: #FAAD63;
+	font-size: 110%;
+	z-index: 10;
+	position: absolute;
+ }
+
+	#map {
+	 z-index: 1;
+	 position: absolute;
+	}
+
+	#controls {
+		height: 90px;
+		background-color: #347B98;
+    border-radius: 15px;
+		text-align: center;
+		padding-top: 15px;
+	}
+
+h1 {
+	font-family: 'Alfa Slab One';
+	letter-spacing: 2px;
+	margin-bottom: 5px;
+  color: #341809;
+	font-weight: 100;
+	margin-top: 0;
+}
+
+h2 {
+	font-family: 'Alfa Slab One';
+	margin-top: 5px;
+	color: #B84E14;
+	font-weight: 100;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	line-height: 25px;
+}
+
+h3 {
+	margin-top: 0;
+}
+
+.zoomButtons {
+	list-style-type: none;
+	background-color: white;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.buttons {
+	margin: 0;
+	line-height: normal;
+}
+
+.buttons > li {
+	border: 1px solid gray;
+	padding: 4px;
+}
+
+.buttons > li:hover {
+	background-color: #F1F5F8;
+}
+
+.buttons > .home {
+	border-top: 0px;
+	border-bottom: 0;
+}
+
+.leaflet-right .leaflet-control {
+	float: none;
+	display: inline-block;
+}
+
+.crimeTitle {
+	color: #FAAD63;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-size: 130%;
+}
+
+.bolder {
+	font-size: 160%;
+}
+
+.info {
+	color: white;
+	margin-bottom: 5px;
+}
+
+.hom16, .burg16, .narc16, .all16, .dem16, .police{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.hom16:hover, .burg16:hover, .narc16:hover, .all16:hover, .dem16:hover, .police:hover {
+	color: #B8C2CC;
+}
+
+.okayButton {
+	border-radius: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 200px;
+    background-color: #F6993F;
+    text-align: center;
+    margin-left: 200px;
+		color: #22292F;
+		cursor: pointer;
+}
+.okayButton:hover {
+	background-color: #FAAD63;
+}
+
+.activeYear {
+	color: #F6993F !important;
+}
+
+.catTitle{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #22292F;
+	font-variant: petite-caps;
+}
+
+.allcrimeInfo, .catcrimeInfo, .regcrimeInfo{
+	margin-left: 10px;
+	top: 1px;
+	position: relative;
+	margin-bottom: 5px;
+}
+
+.allcrimeInfo:hover, .catcrimeInfo:hover, .regcrimeInfo:hover {
+    color: #4DC0B5;
+    cursor: pointer;
+}
+
+.demSelect{
+	background-color: #347B98;
+    border: 0;
+    color: white;
+}
+
+.leaflet-overlay-pane svg path{
+    pointer-events: auto;
+}
+
+.no-show {
+	display: none;
+}
+
+.dem16Layer {
+	z-index: 1;
+	opacity: .3;
+}
+
+.leaflet-map-pane canvas {
+	z-index: 10;
+}
+
+/* modal styling */
+
+#titleHolder, #menuHolder, #linebuttonHolder {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+#titleHolder2{
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* line graph tool tips */
+
+.regionGraph {
+	background-image: url(img/regions.JPG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: black;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: black;
+    stroke: #000;
+    min-width: 50px;
+    opacity: 0.8;
+}
+
+
+.tooltip-date, .tooltip-name, .tooltip-crime {
+    fill: white;
+}
+
+/* end line graph tool tips */
+
+/*bubblegraph*/
+
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    min-width: 60px;
+    min-height: 20px;
+    padding: 4px;
+    font-family: 1.2vw 'Avenir' sans-serif;
+    color: white;
+    background: black;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+text {
+    cursor: default;
+    font-family:
+}
+
+/*end bubblegraph*/
